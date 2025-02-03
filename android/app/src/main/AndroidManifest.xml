@@ -9,6 +9,15 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
   <!-- END OPTIONAL PERMISSIONS -->
 
+  <uses-permission android:name="android.permission.BIND_TELECOM_CONNECTION_SERVICE"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
   <queries>
     <!-- Support checking for http(s) links via the Linking API -->
     <intent>
@@ -18,12 +27,45 @@
     </intent>
   </queries>
 
-  <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="false" android:theme="@style/AppTheme" android:supportsRtl="true">
-    <activity android:name=".MainActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|uiMode" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize" android:theme="@style/Theme.App.SplashScreen" android:exported="true">
+  <application
+    android:name=".MainApplication"
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:allowBackup="false"
+    android:theme="@style/AppTheme"
+    android:supportsRtl="true"
+    android:usesCleartextTraffic="true"> <!-- Allow cleartext traffic if needed -->
+
+    <activity
+      android:name=".MainActivity"
+      android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|uiMode"
+      android:launchMode="singleTask"
+      android:windowSoftInputMode="adjustResize"
+      android:theme="@style/Theme.App.SplashScreen"
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+    <service
+      android:name="io.wazo.callkeep.VoiceConnectionService"
+      android:label="Wazo"
+      android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE"
+      android:exported="true"> <!-- Explicitly set exported -->
+      <intent-filter>
+        <action android:name="android.telecom.ConnectionService"/>
+      </intent-filter>
+    </service>
+
+    <service
+      android:name="io.wazo.callkeep.RNCallKeepBackgroundMessagingService"
+      android:exported="true" /> <!-- Ensure exported is defined if needed -->
+
+    <service android:name="com.example.MyTaskService" />
+
   </application>
+
 </manifest>

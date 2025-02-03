@@ -1,4 +1,4 @@
-package com.myapp
+package com.curomates.androiduat
 
 import android.app.Application
 import android.content.res.Configuration
@@ -12,6 +12,8 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.load
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import io.wazo.callkeep.RNCallKeepPackage 
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper

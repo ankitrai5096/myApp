@@ -1,7 +1,12 @@
 {
   "expo": {
-    "name": "myApp",
-    "slug": "myApp",
-    "version": "1.0.0"
+    "name": "curomates-uat",
+    "slug": "curomates-uat",
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "1487d979-47a7-4374-9e32-2c6fc29d0ac4"
+      }
+    }
   }
 }

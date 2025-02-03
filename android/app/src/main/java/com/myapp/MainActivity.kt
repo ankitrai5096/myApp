@@ -1,4 +1,7 @@
-package com.myapp
+package com.curomates.androiduat
+
+// Add these import statements at the top of your file
+import io.wazo.callkeep.RNCallKeepModule 
 
 import android.os.Build
 import android.os.Bundle
@@ -11,11 +14,12 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 import expo.modules.ReactActivityDelegateWrapper
 
 class MainActivity : ReactActivity() {
+  
   override fun onCreate(savedInstanceState: Bundle?) {
     // Set the theme to AppTheme BEFORE onCreate to support
     // coloring the background, status bar, and navigation bar.
     // This is required for expo-splash-screen.
-    setTheme(R.style.AppTheme);
+    setTheme(R.style.AppTheme)
     super.onCreate(null)
   }
 
@@ -27,7 +31,7 @@ class MainActivity : ReactActivity() {
 
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
-   * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
+   * which allows you to enable New Architecture with a single boolean flag [fabricEnabled]
    */
   override fun createReactActivityDelegate(): ReactActivityDelegate {
     return ReactActivityDelegateWrapper(
@@ -41,10 +45,26 @@ class MainActivity : ReactActivity() {
   }
 
   /**
-    * Align the back button behavior with Android S
-    * where moving root activities to background instead of finishing activities.
-    * @see <a href="https://developer.android.com/reference/android/app/Activity#onBackPressed()">onBackPressed</a>
-    */
+   * Handle permission results for RNCallKeep
+   */
+  override fun onRequestPermissionsResult(
+    requestCode: Int, 
+    permissions: Array<String>, 
+    grantResults: IntArray
+  ) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    when (requestCode) {
+      RNCallKeepModule.REQUEST_READ_PHONE_STATE -> {
+        RNCallKeepModule.onRequestPermissionsResult(requestCode, permissions, grantResults)
+      }
+    }
+  }
+
+  /**
+   * Align the back button behavior with Android S
+   * where moving root activities to background instead of finishing activities.
+   * @see <a href="https://developer.android.com/reference/android/app/Activity#onBackPressed()">onBackPressed</a>
+   */
   override fun invokeDefaultOnBackPressed() {
       if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.R) {
           if (!moveTaskToBack(false)) {

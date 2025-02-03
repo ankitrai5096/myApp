@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "40762441913",
+    "project_id": "curomates-uat",
+    "storage_bucket": "curomates-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40762441913:android:d6192e381ca95c1ca09b68",
+        "android_client_info": {
+          "package_name": "com.curomates.androiduat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40762441913-9pm7oj7shs3nibhgjem406dn9sebj0b8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.curomates.androiduat",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "40762441913-ig2feletq5ooouototga8i49n6b8omoe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.curomates.androiduat",
+            "certificate_hash": "2f13551efa96afe8e7c1588ef1e4b512b87e4009"
+          }
+        },
+        {
+          "client_id": "40762441913-uvrrugebqr6jgidc3qbjmdtk1rlpkdcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg-JYNJO-BojlSD6bAqZpYanUJQy2pI-8"
+        },
+        {
+          "current_key": "AIzaSyBQHbsgv3Fg4ZAyStJ8ceuFq9V59VAPvpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40762441913-aacgt35sfgdm2vbbgdi5hot8v0kdmim5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40762441913-joip5nohanm29d4q9u4rat136v4v8pbh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.curomates.iosuat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40762441913:android:dc3183345362a7dda09b68",
+        "android_client_info": {
+          "package_name": "com.curomates.professionalsuat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40762441913-uvrrugebqr6jgidc3qbjmdtk1rlpkdcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg-JYNJO-BojlSD6bAqZpYanUJQy2pI-8"
+        },
+        {
+          "current_key": "AIzaSyBQHbsgv3Fg4ZAyStJ8ceuFq9V59VAPvpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40762441913-aacgt35sfgdm2vbbgdi5hot8v0kdmim5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40762441913-joip5nohanm29d4q9u4rat136v4v8pbh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.curomates.iosuat"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40762441913:android:672327d2bfa70c04a09b68",
+        "android_client_info": {
+          "package_name": "com.moodlift.androidUat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40762441913-uvrrugebqr6jgidc3qbjmdtk1rlpkdcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg-JYNJO-BojlSD6bAqZpYanUJQy2pI-8"
+        },
+        {
+          "current_key": "AIzaSyBQHbsgv3Fg4ZAyStJ8ceuFq9V59VAPvpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40762441913-aacgt35sfgdm2vbbgdi5hot8v0kdmim5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "40762441913-joip5nohanm29d4q9u4rat136v4v8pbh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.curomates.iosuat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
